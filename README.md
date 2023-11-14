@@ -891,8 +891,7 @@ def guide(X, Y):
 
 	# Sample from the approximate posterior distributions
 	slope = pyro.sample("slope", dist.Normal(slope_loc, slope_scale))
-	intercept = pyro.sample("intercept", dist.Normal(intercept_loc,
-													intercept_scale))
+	intercept = pyro.sample("intercept", dist.Normal(intercept_loc, intercept_scale))
 	sigma = pyro.sample("sigma", dist.HalfNormal(sigma_loc))
 
 # Initialize the SVI and optimizer
